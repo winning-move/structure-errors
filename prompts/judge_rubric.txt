@@ -1,0 +1,5 @@
+The instrument rates ideas on dimensions, each with two subscales. The dimensions rated here and their definitions (Dean et al., 2006, Table 8):
+  Novelty: the degree to which an idea is original and modifies a paradigm.
+  Workability: an idea is workable if it can be easily implemented and does not violate known constraints.
+  Relevance: the idea applies to the stated problem and will be effective at solving the problem.
+In this call you rate all three dimensions, each through its two subscales, in the order listed below. Use ONLY the anchored levels below; for each subscale pick the one level whose description fits. Rate each subscale on its own evidence: a proposal that is hard to implement is NOT therefore less relevant. For rarity, the reference class is the set of responses an experienced evaluator would expect AI R&D labs to give to this mandate.

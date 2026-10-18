@@ -1,0 +1,36 @@
+## originality
+originality (1-4): the degree to which the idea is not only rare but is also ingenious, imaginative, or surprising.
+   4 = not expressed before (rare, unusual) AND ingenious, imaginative, or surprising; may be humorous
+   3 = unusual, interesting; shows some imagination
+   2 = interesting
+   1 = common, mundane, boring
+## paradigm_relatedness
+paradigm_relatedness (1-4): the degree to which an idea preserves or modifies the paradigm, anchored to this problem (Dean et al., 2006, Appendix B, adapted to the stated problem as the instrument requires).
+   4 = paradigm breaking: introduces new elements AND changes the relationship between the lab's R&D and its compliance obligations, or addresses the larger problem of what the lab researches
+   3 = paradigm stretching: changes that relationship (e.g., logging woven into the science, new partners or offerings born from compliance)
+   2 = slightly paradigm stretching: introduces new elements (tools, formats, processes) but still treats compliance as logging practice
+   1 = paradigm preserving: standard compliance and logging practice; the lab's way of working is unchanged
+## acceptability
+acceptability (1-4): the degree to which the idea is socially, legally, or politically acceptable.
+   4 = common strategies that violate no norms or sensibilities
+   3 = somewhat uncommon or unusual strategies that do not offend sensibilities
+   2 = offends sensibilities somewhat but is not totally unacceptable
+   1 = radically violates laws or sensibilities, or totally unacceptable business practice
+## implementability
+implementability (1-4): the degree to which the idea can be easily implemented.
+   4 = easy to implement at low cost, or non-radical changes
+   3 = some changes, or reasonably feasible measures
+   2 = significant change, or expensive or difficult, but not totally impossible to implement
+   1 = totally infeasible to implement, or extremely financially nonviable
+## applicability
+applicability (1-4): the degree to which the idea clearly applies to the stated problem.
+   4 = solves an identified problem that is directly related to the stated problem (do X to get Y, and Y is part of the stated problem)
+   3 = solves an implied problem that is related to the stated problem (do X to get an implied Y, which applies to the stated problem)
+   2 = may have some benefit within a special situation and somehow relates to the stated problem (do X, which somehow relates to the stated problem)
+   1 = intervention is not stated or does not produce a useful outcome (no X), or (do X for useless Y)
+## effectiveness
+effectiveness (1-4): the degree to which the idea will solve the problem.
+   4 = reasonable and will solve the stated problem without regard for workability (if you could do it, it would solve the main problem)
+   3 = reasonable and will contribute to the solution of the problem (it helps, but it is only a partial solution)
+   2 = unreasonable or unlikely to solve the problem (it probably will not work)
+   1 = solves an unrelated problem (it would not work, even if you could do it)

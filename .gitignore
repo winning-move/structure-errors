@@ -1,0 +1,11 @@
+# the study folder as its own repository: nothing local, secret, or generated is ever committed
+.venv/
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+# the data folder is committed after the run (RUNBOOK 6) with the raw call logs in compressed form only; the
+# uncompressed originals and the archive zips stay local
+data/**/calls_*.jsonl
+archive/

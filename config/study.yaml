@@ -1,0 +1,117 @@
+# Registered settings of the study (PROTOCOL.md). A change after registration is a deviation (DEVIATIONS.md).
+
+study: registered-study
+
+design:
+  structures: [hierarchy, polyarchy]
+  orgs_per_structure: 84          # first wave per structure in each experiment (PROTOCOL.md 6)
+  roles_per_org: 4
+  proposals_per_role: 3           # 12 proposals per organization
+  allocation_block_size: 4        # 2 hierarchies + 2 polyarchies per block, order randomized within the block
+  reserve_orgs_per_structure: 168 # pre-drawn replacements, used in order, only for organizations that fail (8.3)
+  extension:                      # internal pilot for H2: one recalculation after the first wave (6.4)
+    step_per_structure: 2         #   sizes in whole allocation blocks
+    max_per_structure: 168
+  seeds:
+    allocation: 26100501          # structure order within blocks
+    evaluation_order: 26100502    # proposal order per evaluator role
+    judge_blind_ids: 26100503     # opaque proposal ids shown to evaluators and judges
+    judge_pass_1: 26100504        # proposal order, judge reading 1
+    judge_pass_2: 26100505        # proposal order, judge reading 2
+    judge_pass_3: 26100508        # proposal order, judge reading 3
+    judge_pass_4: 26100509        # proposal order, judge reading 4
+    judge_pass_5: 26100514        # proposal order, judge reading 5
+    judge_pass_6: 26100515        # proposal order, judge reading 6
+    judge_pass_7: 26100517        # proposal order, judge reading 7
+    judge_pass_8: 26100518        # proposal order, judge reading 8
+    bootstrap: 26100506           # resampling in the analysis
+    permutation: 26100507         # permutation test within allocation blocks (secondary)
+    judge_order: 26100519         # order of the dimensions and subscales in a judge call (4.4)
+    schedule: 26100520            # order in which a stage's calls are sent (9)
+
+evaluation:
+  batch_size: 1                   # one proposal per evaluator call (4.3)
+  rules: {one_of_four: 1, four_of_four: 4}
+
+judging:
+  batch_size: 1                   # one proposal per judge call (4.4)
+  readings:                       # readings rule (4.4): at least 4, then the smallest even number up to 8 at which the
+    floor: 4                      #   reliability of the averaged score reaches the target on each dimension
+    step: 2
+    ceiling: 8
+    target: 0.80
+    dimensions: [novelty, workability, relevance]
+  call_unit: all                  # one call rates all six subscales, in a seeded random order (4.4)
+  primary: glimmer                # categories for every registered test (5.4)
+  second: claude                  # repeats every test with its own categories (5.4, 7.4)
+
+retries:
+  transport_attempts: 6           # network and server errors: the same request, with exponential backoff
+  content_attempts: 3             # unusable answers: the same prompt with a new seed, 3 attempts in all (8.1)
+
+validation:                       # guards against degenerate answers (8.2); the requested length is not enforced
+  min_words_reasoning: 15
+  min_words_proposal: 15          # title, what, how, and why together
+  min_unique_words: 4
+
+arms:
+  gemma:                          # second experiment (replication): Gemma 4 31B writes, Qwen 3.8 27B evaluates
+    label: "Gemma 4 31B (8-bit GGUF, thinking on) writers; Qwen 3.8 27B (8-bit GGUF, thinking at medium) evaluators"
+    backend: openai_compatible
+    base_url: http://localhost:1234/v1
+    model: gemma4                 # LM Studio identifier; lmstudio-community/gemma-4-31B-it-GGUF (Q8_0), thinking on (5.3)
+    lms_key: gemma-4-31b-it-think
+    weights_dir: ~/.lmstudio/models/bench-local/gemma-4-31B-it-GGUF-think
+    sampling: {temperature: 1.0, top_p: 0.95, top_k: 64}   # the developer's recommended setting
+    seed_per_call: true
+    max_tokens: 10000
+    concurrency: 4
+    load: {context_length: 49152, parallel: 4}   # LM Studio load recipe; preflight checks the loaded model against it
+    evaluator: qwen38
+  qwen38:                         # main experiment: Qwen 3.8 27B writes, Gemma 4 31B evaluates
+    label: "Qwen 3.8 27B (8-bit GGUF, thinking at medium) writers; Gemma 4 31B (8-bit GGUF, thinking on) evaluators"
+    backend: openai_compatible
+    base_url: http://localhost:1234/v1
+    model: qwen38                 # LM Studio identifier; lmstudio-community/Qwen3.8-27B-GGUF (Q8_0), thinking at medium (5.3)
+    lms_key: qwen3.8-27b-medium
+    weights_dir: ~/.lmstudio/models/bench-local/Qwen3.8-27B-GGUF-medium
+    sampling: {temperature: 1.0, top_p: 0.95, top_k: 20}   # the developer's recommended setting with thinking on
+    seed_per_call: true
+    max_tokens: 10000
+    concurrency: 4
+    load: {context_length: 49152, parallel: 4}
+    evaluator: gemma
+
+judges:
+  claude:                         # second judge, through the Message Batches API after the offline run (5.4)
+    backend: anthropic_batch
+    model: claude-sonnet-5-5
+    effort: medium
+    thinking_display: summarized
+    max_tokens: 10000
+    poll_seconds: 60
+  glimmer:                        # primary judge: unsloth/Muse-Glimmer-30B-GGUF (Q8_0) @ faa5b025c5, reasoning at medium (5.3)
+    backend: openai_compatible
+    base_url: http://localhost:1234/v1
+    model: glimmer
+    lms_key: muse-glimmer-30b-medium
+    weights_dir: ~/.lmstudio/models/bench-local/Muse-Glimmer-30B-Q8-medium
+    sampling: {temperature: 1.0, top_p: 0.95, top_k: 64}   # the developer's recommended setting
+    seed_per_call: true
+    max_tokens: 10000
+    concurrency: 12
+    load: {context_length: 98304, parallel: 12}
+
+categories:                       # Dean, Hender, Rodgers, and Santanen (2006), on the 2-8 dimension scale (7.1)
+  threshold: 6
+  quality: "workability >= 6 AND relevance >= 6"
+  creative: "quality AND novelty >= 6"
+  below: "workability < 6 OR relevance < 6"
+  novel: "novelty >= 6 (secondary)"
+  sensitivity_thresholds: [5, 7]
+  omission_error: "a quality proposal not approved"
+  commission_error: "a below-threshold proposal approved"
+
+analysis:
+  hypotheses: [H1, H2a, H2b]      # PROTOCOL.md 2
+  correction: none                # each hypothesis tested on its own at alpha .05 (7.2)

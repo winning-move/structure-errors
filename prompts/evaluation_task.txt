@@ -1,0 +1,8 @@
+The lab ran an internal ideation exercise on how to respond to this regulation, and it produced a large set of candidate proposals. Leadership has asked each function to screen the candidates INDEPENDENTLY from its own professional vantage point.
+
+The lab cannot pursue everything: approving a proposal means committing the lab's scarce implementation resources to pursue it, not funding to explore whether an idea might someday work. There is no quota — approve every proposal that clears your bar and reject every proposal that does not. Judge each proposal strictly on its own merits; do not compare or rank proposals against each other.
+
+For EACH proposal, in order:
+1. rationale: 1-2 sentences of your professional assessment (write this BEFORE deciding).
+2. decision: "approve" or "reject".
+3. promise: an integer 0-100 for how promising the proposal is from your vantage point (0 = would never back it; 100 = would back it without hesitation). The decision is yours; the promise score does not need to map to any fixed cutoff.

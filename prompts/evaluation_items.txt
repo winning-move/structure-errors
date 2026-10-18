@@ -1,0 +1,5 @@
+The proposal to screen is listed below as JSON, with an opaque "id" and its "text"; you know nothing else about its origin.
+
+{items}
+
+Return your screening of this proposal, echoing its id exactly.

@@ -1,0 +1,9 @@
+Then propose exactly 3 distinct, concrete things the lab could do in response — specific projects or actions. Make them genuinely different from one another (not three versions of the same idea).
+
+For each proposal give:
+- title: a short name (at most 10 words)
+- what: what it is, 1-2 sentences
+- how: how the lab would do it, 1-2 sentences
+- why: why it serves the lab, 1 sentence
+
+Keep each proposal between 60 and 110 words across its four fields. Write plain prose (no bullet lists inside fields). Stay in your role.

@@ -1,0 +1,5 @@
+The proposal to rate is listed below as JSON, with an opaque "id" and its "text"; you know nothing else about its origin.
+
+{items}
+
+Return the rating of this proposal, echoing its id exactly. For each subscale ({subscales}), in the order listed, give "<subscale>_evidence" (one sentence) first and then "<subscale>" (an integer level of that subscale).

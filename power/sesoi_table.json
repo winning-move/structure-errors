@@ -1,0 +1,73 @@
+{
+ "sesoi": {
+  "0.5": {
+   "n_detect_80": 64,
+   "n_detect_90": 86,
+   "n_equivalence_80": 70,
+   "power_detect_at": {
+    "84": 0.896,
+    "168": 0.995
+   },
+   "power_equivalence_at": {
+    "84": 0.885,
+    "168": 0.996
+   }
+  },
+  "0.45": {
+   "n_detect_80": 79,
+   "n_detect_90": 105,
+   "n_equivalence_80": 86,
+   "power_detect_at": {
+    "84": 0.826,
+    "168": 0.984
+   },
+   "power_equivalence_at": {
+    "84": 0.791,
+    "168": 0.986
+   }
+  },
+  "0.4": {
+   "n_detect_80": 100,
+   "n_detect_90": 133,
+   "n_equivalence_80": 108,
+   "power_detect_at": {
+    "84": 0.731,
+    "168": 0.955
+   },
+   "power_equivalence_at": {
+    "84": 0.651,
+    "168": 0.955
+   }
+  },
+  "0.35": {
+   "n_detect_80": 130,
+   "n_detect_90": 173,
+   "n_equivalence_80": 141,
+   "power_detect_at": {
+    "84": 0.616,
+    "168": 0.892
+   },
+   "power_equivalence_at": {
+    "84": 0.46,
+    "168": 0.88
+   }
+  },
+  "0.3": {
+   "n_detect_80": 176,
+   "n_detect_90": 235,
+   "n_equivalence_80": 192,
+   "power_detect_at": {
+    "84": 0.489,
+    "168": 0.783
+   },
+   "power_equivalence_at": {
+    "84": 0.228,
+    "168": 0.728
+   }
+  }
+ },
+ "smallest_detectable_d_at_power_.80": {
+  "84": 0.435,
+  "168": 0.307
+ }
+}
