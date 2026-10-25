@@ -1,0 +1,22 @@
+{
+ "state": "FINISHED",
+ "step": "",
+ "attempt": 0,
+ "started": "2026-10-24T20:08:13",
+ "smoke": 0,
+ "done": [
+  "judge qwen38 (second):judge --arm qwen38 --judge claude",
+  "readings check qwen38 (second):readings-check --arm qwen38 --judge claude",
+  "judge qwen38 (second, decided readings):judge --arm qwen38 --judge claude",
+  "judge gemma (second):judge --arm gemma --judge claude",
+  "readings check gemma (second):readings-check --arm gemma --judge claude",
+  "judge gemma (second, decided readings):judge --arm gemma --judge claude",
+  "manifest qwen38:manifest --arm qwen38",
+  "analyze qwen38:analyze --arm qwen38",
+  "analyze qwen38 (second judge):analyze --arm qwen38 --judge claude",
+  "manifest gemma:manifest --arm gemma",
+  "analyze gemma:analyze --arm gemma",
+  "analyze gemma (second judge):analyze --arm gemma --judge claude"
+ ],
+ "reason": ""
+}

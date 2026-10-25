@@ -1,0 +1,330 @@
+{
+  "written_utc": "2026-10-25T00:27:48.582958+00:00",
+  "arm": "qwen38",
+  "protocol_sha256": {
+    "config/study.yaml": "33e1b6f1d77598d3e8249a65ba02fd056203b04dbb87da2585806bdda91b5c15",
+    "prompts/policy.txt": "5c204430d605e0eb72e7a5bd60885306570d30e5c0422c9d53d7d2f1d9d5b783",
+    "prompts/roles.json": "dc21d0bd083ddb97127ec52a113e7c21e8a6e70fcd587efdd3c0aa6975283f6e",
+    "prompts/stance_task.txt": "bb99cb728ea8a34aad4bf2d061863fc6d0654c0608d24709ed8cbb1d300f83e3",
+    "prompts/generation_task.txt": "671dba94f297f9cc113dc20145102cc292f0d16f42c84817bc6a26a2dc116cc5",
+    "prompts/hierarchy_peer_intro.txt": "7ba1b7d2454c75922b0b465c048bff560c1c713226c9a2fe08841a12c03063de",
+    "prompts/evaluation_task.txt": "e474d658542684c30a5a65da9226836af4b172251e4ea2face8b1689fe383b96",
+    "prompts/evaluation_items.txt": "04fe3bf40dda903cb3dae4be77952f19751551d43c6690c133ffaaf377423e46",
+    "prompts/judge_persona.txt": "749d03586d2b36f8b8a1942bd7583413867de0d79fe8a03a5c7373df21adb347",
+    "prompts/judge_problem.txt": "8b253d7494aef8c0f1d069b752b2758460593f1a1f634827ff0dcbf91e0aa83c",
+    "prompts/judge_rubric.txt": "11d06a582092c5380ee35b37f7c5838fd15d113428c549fdba60c09f7fe1ba0d",
+    "prompts/judge_anchors.txt": "b3fe69bd077dbff4b7055060ed2ca0ad537689141b6d8b9e9a88dfccdf8b920d",
+    "prompts/judge_protocol.txt": "4c5f63cb91896fa5b6988ec20867d8861a827d2bd8720b56afff7c4a0945093d",
+    "prompts/judge_items.txt": "0cba027dd09a871638d4d4b9e7d940ce30acc9005baf2424d1891c1755e91d29"
+  },
+  "code_sha256": {
+    "src/np_registered/__init__.py": "1749c7a133ed84302e54c967d18eab7cb1df333ff3ccb832342159aee5f493d9",
+    "src/np_registered/__main__.py": "c903f4b1ffab9133bedcc3a8b6fe1b96fba4bcd1b06c9173d7485084cb317093",
+    "src/np_registered/analysis.py": "e4fa471640d7d668ee979a21248476c6cc495a70445ae851c0c0e41a09872bf1",
+    "src/np_registered/backends.py": "7bcaf810289b4cde4e4e3512afdda68755cbfbacdbc87f5f3f506b07b4943e04",
+    "src/np_registered/cli.py": "a8b110a98120451dbcb4eec9b0fbf6457b164318c5d434baa9b8212db9aa5ddc",
+    "src/np_registered/config.py": "3b2d578ee3353abf2a339f71d2dbef6ff88f46ff1385b5dc36d34222b7ef82e4",
+    "src/np_registered/manifest.py": "71b6eaa39b4b91dd460bfd42ab246793306f667bb95584cf3f87d73f287cd988",
+    "src/np_registered/power.py": "dfcd744cb10575cb9066306bf5de33ab55948e77577029180e3c2909198886b3",
+    "src/np_registered/preflight.py": "99113bdfc8a4b2ec2dbb0a122d04a093209201e6dfe12a40311603639d47bfe8",
+    "src/np_registered/prompts.py": "9c415396ba380e73b6f137cf0b31ba8cbd15fadc8fd731d5cb10af2096485195",
+    "src/np_registered/report.py": "c447710725199bbdc028940bd4bce63dae2bfdbe31542a5bd3dc20633c439b8e",
+    "src/np_registered/run_all.py": "e736512035adc9299de7980da5ae6d062ab1ab78bf7631806574d317cd1c005b",
+    "src/np_registered/runner.py": "646deb69f91900927e19f14a8e8788cfd3d1b0930dcaea58a7b0eae2e669ec0d",
+    "src/np_registered/schemas.py": "68fdb881fc572adfc4fb2d209576fe84e379898aa098f569ad53c2b7b486ca67",
+    "src/np_registered/stages.py": "09124f703e9920c97b575446eebc5d8e0c82707e35fd43eca2b5a5e5e17dc13c"
+  },
+  "data_sha256": {
+    "allocation.csv": "8b454d65a4a17cd298fd577782a2a685dfa382a50ab75f97ccc6d6c684cd3805",
+    "calls_evaluation_gemma.jsonl": "4574877a91f0a34933dee1a080563ff7aedfbcaa73b4e34df742fed460df57c0",
+    "calls_generation.jsonl": "91a05067b97402c31a088f7e0941f1be0a6c23da7ec54932ae3cfd11bc5e2a3b",
+    "calls_judge_claude.jsonl": "9248487ec633dc3451f86e15090b356f5134f4d354549fdfb03a2d6859295e87",
+    "calls_judge_glimmer.jsonl": "979381c2e148f79302754e5b6929603c1f2b87d4c68190c2ce92a90cbf68a2a1",
+    "extension.json": "ee8b6167729f8d85f75e67ed928c0c718ff03efee6bcb40a562b501aa7702eb5",
+    "orgs.jsonl": "a806e0fb9bbe718be75dcfbe1c03963241dc0a628cc02daff12ed7c01dd4afb9",
+    "preflight.jsonl": "3514b35915df64f9b83168aa53744e282e88ee44b181e589602b1649f3a123fd",
+    "ratings_claude.jsonl": "9b7208d5ccde058cf514250e1b39cf18fba649c28b6174c02369adf472145425",
+    "ratings_glimmer.jsonl": "ffa08ed7fe3dcdb858fa3ab7ce31552bb0b63cf1a24dd18899414dd0f9a7a255",
+    "readings_claude.json": "7b9c72e48ec28ff075c41d49dc3bdd781cfbe756b74a56f4d39822e467da9b39",
+    "readings_glimmer.json": "5fdb11014d977cc54e879f3e8ad81954c0aa9bfc7c615436dfbb27e824ec0f85",
+    "votes_gemma.jsonl": "48bb291fa75af6c7510e702df4c9223540eca1a046a4edf7486649004094a0ec"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "anthropic": "1.11.0",
+    "openai": "3.24.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "platform": "macOS-27.0.1-arm64-arm-64bit"
+  },
+  "machine": {
+    "hw_model": "Mac17,14",
+    "chip": "Apple M5 Max",
+    "memory_bytes": "68719476736",
+    "macos": "27.0.1",
+    "build": "26A434",
+    "wifi": "Wi-Fi Power (en1): On",
+    "ethernet_en0": "status: active"
+  },
+  "stage_times": {
+    "calls_evaluation_gemma.jsonl": {
+      "first_utc": "2026-10-18T16:15:13.717+00:00",
+      "last_utc": "2026-10-20T05:10:28.332+00:00",
+      "attempts": 8065
+    },
+    "calls_generation.jsonl": {
+      "first_utc": "2026-10-18T08:44:26.334+00:00",
+      "last_utc": "2026-10-18T16:13:52.502+00:00",
+      "attempts": 673
+    },
+    "calls_judge_claude.jsonl": {
+      "first_utc": "2026-10-25T00:19:24.616+00:00",
+      "last_utc": "2026-10-25T00:19:24.616+00:00",
+      "attempts": 8064
+    },
+    "calls_judge_glimmer.jsonl": {
+      "first_utc": "2026-10-20T05:13:02.168+00:00",
+      "last_utc": "2026-10-21T18:46:51.396+00:00",
+      "attempts": 8064
+    }
+  },
+  "config": {
+    "study": "registered-study",
+    "design": {
+      "structures": [
+        "hierarchy",
+        "polyarchy"
+      ],
+      "orgs_per_structure": 84,
+      "roles_per_org": 4,
+      "proposals_per_role": 3,
+      "allocation_block_size": 4,
+      "reserve_orgs_per_structure": 168,
+      "extension": {
+        "step_per_structure": 2,
+        "max_per_structure": 168
+      },
+      "seeds": {
+        "allocation": 26100501,
+        "evaluation_order": 26100502,
+        "judge_blind_ids": 26100503,
+        "judge_pass_1": 26100504,
+        "judge_pass_2": 26100505,
+        "judge_pass_3": 26100508,
+        "judge_pass_4": 26100509,
+        "judge_pass_5": 26100514,
+        "judge_pass_6": 26100515,
+        "judge_pass_7": 26100517,
+        "judge_pass_8": 26100518,
+        "bootstrap": 26100506,
+        "permutation": 26100507,
+        "judge_order": 26100519,
+        "schedule": 26100520
+      }
+    },
+    "evaluation": {
+      "batch_size": 1,
+      "rules": {
+        "one_of_four": 1,
+        "four_of_four": 4
+      }
+    },
+    "judging": {
+      "batch_size": 1,
+      "readings": {
+        "floor": 4,
+        "step": 2,
+        "ceiling": 8,
+        "target": 0.8,
+        "dimensions": [
+          "novelty",
+          "workability",
+          "relevance"
+        ]
+      },
+      "call_unit": "all",
+      "primary": "glimmer",
+      "second": "claude"
+    },
+    "retries": {
+      "transport_attempts": 6,
+      "content_attempts": 3
+    },
+    "validation": {
+      "min_words_reasoning": 15,
+      "min_words_proposal": 15,
+      "min_unique_words": 4
+    },
+    "arms": {
+      "gemma": {
+        "label": "Gemma 4 31B (8-bit GGUF, thinking on) writers; Qwen 3.8 27B (8-bit GGUF, thinking at medium) evaluators",
+        "backend": "openai_compatible",
+        "base_url": "http://localhost:1234/v1",
+        "model": "gemma4",
+        "lms_key": "gemma-4-31b-it-think",
+        "weights_dir": "~/.lmstudio/models/bench-local/gemma-4-31B-it-GGUF-think",
+        "sampling": {
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 64
+        },
+        "seed_per_call": true,
+        "max_tokens": 10000,
+        "concurrency": 4,
+        "load": {
+          "context_length": 49152,
+          "parallel": 4
+        },
+        "evaluator": "qwen38"
+      },
+      "qwen38": {
+        "label": "Qwen 3.8 27B (8-bit GGUF, thinking at medium) writers; Gemma 4 31B (8-bit GGUF, thinking on) evaluators",
+        "backend": "openai_compatible",
+        "base_url": "http://localhost:1234/v1",
+        "model": "qwen38",
+        "lms_key": "qwen3.8-27b-medium",
+        "weights_dir": "~/.lmstudio/models/bench-local/Qwen3.8-27B-GGUF-medium",
+        "sampling": {
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 20
+        },
+        "seed_per_call": true,
+        "max_tokens": 10000,
+        "concurrency": 4,
+        "load": {
+          "context_length": 49152,
+          "parallel": 4
+        },
+        "evaluator": "gemma"
+      }
+    },
+    "judges": {
+      "claude": {
+        "backend": "anthropic_batch",
+        "model": "claude-sonnet-5-5",
+        "effort": "medium",
+        "thinking_display": "summarized",
+        "max_tokens": 10000,
+        "poll_seconds": 60
+      },
+      "glimmer": {
+        "backend": "openai_compatible",
+        "base_url": "http://localhost:1234/v1",
+        "model": "glimmer",
+        "lms_key": "muse-glimmer-30b-medium",
+        "weights_dir": "~/.lmstudio/models/bench-local/Muse-Glimmer-30B-Q8-medium",
+        "sampling": {
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 64
+        },
+        "seed_per_call": true,
+        "max_tokens": 10000,
+        "concurrency": 12,
+        "load": {
+          "context_length": 98304,
+          "parallel": 12
+        }
+      }
+    },
+    "categories": {
+      "threshold": 6,
+      "quality": "workability >= 6 AND relevance >= 6",
+      "creative": "quality AND novelty >= 6",
+      "below": "workability < 6 OR relevance < 6",
+      "novel": "novelty >= 6 (secondary)",
+      "sensitivity_thresholds": [
+        5,
+        7
+      ],
+      "omission_error": "a quality proposal not approved",
+      "commission_error": "a below-threshold proposal approved"
+    },
+    "analysis": {
+      "hypotheses": [
+        "H1",
+        "H2a",
+        "H2b"
+      ],
+      "correction": "none"
+    }
+  },
+  "weights_sha256": {
+    "writer:qwen38": {
+      "Qwen3.8-27B-Q8_0.gguf": "626f85c83efda3ad4b123bef382e10fda4952244dcec71d68c1ef68b2b8670cd",
+      "chat_template.original.jinja": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+      "chat_template.patched.jinja": "b96ee932a8c80f8db1fb9956928ada54bd7a6a276458656da2337c273949ed69"
+    },
+    "evaluator:gemma": {
+      "chat_template.original.jinja": "85a08664d16d8f3be4416c92427b3ac10df1024ac566cc0b4bc3bab409393f98",
+      "chat_template.patched.jinja": "73374b2143f9b47d1548048c774e49623bdb916d4b979298fb7e3afca01f253d",
+      "gemma-4-31B-it-Q8_0.gguf": "ee607449a781f6f249e1a3c6114de395ae3eb964c589f8289d5a308621ae0e4b"
+    },
+    "judge-primary:glimmer": {
+      "Muse-Glimmer-30B-medium-Q8_0.gguf": "a37f49da7600da5ae88e7c5668b9d459f31ae8b0e532840220d5cb0f75e3cf85",
+      "chat_template.original.jinja": "114f55ebdc1804c1af371197b9fdf2d6bb925966c9dfe46b73782a71bc07965e",
+      "chat_template.patched.jinja": "49f73efa6380434be7ad916367c78b8b00dde9812d3ae8dc812aa6fdf41bf981",
+      "provenance.json": "2625c99c7578f90e0aeb1ea7f2c925afa5ab9be319b0e6b1daf5596f57130fa3"
+    }
+  },
+  "lmstudio": {
+    "app_version": "0.4.26+4",
+    "loaded_models": [
+      {
+        "type": "llm",
+        "modelKey": "muse-glimmer-30b-medium",
+        "format": "gguf",
+        "displayName": "Muse Glimmer 30B Medium",
+        "publisher": "bench-local",
+        "path": "bench-local/Muse-Glimmer-30B-Q8-medium/Muse-Glimmer-30B-medium-Q8_0.gguf",
+        "sizeBytes": 29612958048,
+        "indexedModelIdentifier": "bench-local/Muse-Glimmer-30B-Q8-medium/Muse-Glimmer-30B-medium-Q8_0.gguf",
+        "deviceIdentifier": null,
+        "paramsString": "28B",
+        "architecture": "muse-glimmer",
+        "quantization": {
+          "name": "Q8_0",
+          "bits": 8
+        },
+        "identifier": "glimmer",
+        "ttlMs": null,
+        "lastUsedTime": 1792886477119,
+        "vision": false,
+        "trainedForToolUse": true,
+        "maxContextLength": 131072,
+        "contextLength": 98304,
+        "status": "idle",
+        "queued": 0,
+        "parallel": 12,
+        "engineConfigFileEnabled": false
+      }
+    ],
+    "runtimes": [
+      "LLM ENGINE                                          SELECTED    MODEL FORMAT",
+      "llama.cpp-mac-arm64-apple-metal-advsimd@2.58.1         ✓            GGUF    ",
+      "llama.cpp-mac-arm64-apple-metal-advsimd@2.54.0                      GGUF    ",
+      "llama.cpp-mac-arm64-apple-metal-advsimd@2.52.0                      GGUF    ",
+      "llama.cpp-mac-arm64-apple-metal-advsimd@2.51.0                      GGUF    ",
+      "llama.cpp-mac-arm64-apple-metal-advsimd@2.50.0                      GGUF    ",
+      "llama.cpp-mac-arm64-apple-metal-advsimd@2.41.0                      GGUF    ",
+      "mlx-llm-mac-arm64-apple-metal-advsimd@1.11.0                        MLX     ",
+      "mlx-llm-mac-arm64-apple-metal-nax-advsimd@1.13.1       ✓            MLX     ",
+      "mlx-llm-mac-arm64-apple-metal-nax-advsimd@1.11.0                    MLX"
+    ]
+  },
+  "models_returned": {
+    "calls_judge_glimmer.jsonl": [
+      "glimmer"
+    ],
+    "calls_judge_claude.jsonl": [
+      "claude-sonnet-5-5"
+    ],
+    "calls_generation.jsonl": [
+      "qwen38"
+    ],
+    "calls_evaluation_gemma.jsonl": [
+      "gemma4"
+    ]
+  }
+}
