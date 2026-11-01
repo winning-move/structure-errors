@@ -1,5 +1,11 @@
 # Organizational structure and the errors of generation and evaluation
 
+**Start here: the [Interactive Explorer](https://winning-move.github.io/structure-errors/explorer/)**, with every
+proposal, vote, rationale, and judge reading (the same file is `explorer/index.html`). The text below is the study's
+description as deposited before data collection.
+
+---
+
 Does organizational structure change what an organization proposes, and does that change alter what the organization
 approves? Artificial organizations of four LLM role agents (compliance officer, lab director, researcher, and engineer)
 respond to Article 12 of the EU AI Act. In a hierarchy, juniors read the stances and reasoning of their seniors before
